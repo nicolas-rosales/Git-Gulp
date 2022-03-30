@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Gulp_Informatica.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\Usuario\Documents\Git-Gulp\Gulp_Informatica\Inicio_App\template\Inicio_App'],
+        'DIRS': [r'C:\Users\Usuario\Documents\Git-Gulp\Git-Gulp\Gulp_Informatica\Inicio_App\template\Inicio_App'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
