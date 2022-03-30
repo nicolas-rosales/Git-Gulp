@@ -1,0 +1,38 @@
+{% extends "BasePage.html" %}
+
+{% load static %}
+
+
+{% block EstoCambia %}
+
+<header class="bg- py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-success">
+            <h1 class="display-4 fw-bolder">Gulp - Soluciones Informaticas</h1>
+            
+            <p class="lead fw-normal text-white-180 mb-0">Pagina para Cargar Ventas Realizadas</p>
+        </div>
+      </div>
+   
+      
+      {% if formulario.errors %}
+
+         <p style="color: red">  Los datos cargados no son correctos </p>
+      {% endif %}
+         
+   
+      <form action="/ventasform/" method="POST">
+         {% csrf_token %}
+          
+      <table>
+            
+         {{formulario}}
+            
+      </table>
+         
+         <input type="submit" value="Guardar">
+      </form>
+</header>
+
+
+{% endblock EstoCambia %}
