@@ -1,0 +1,37 @@
+{% extends "BasePage.html" %}
+
+{% load static %}
+
+
+
+{% block EstoCambia %}
+
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Gulp - Soluciones Informaticas</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Pagina para Buscar los Clientes Guardados</p>
+        </div>
+    </div>
+
+    <form action="/buscarcliente/" method="get">
+     
+        <input type="text" name="cliente" id="cliente">
+
+        <input type="submit" value="Buscar Cliente">
+    </form>
+ 
+    <p style="color: white;"> Estamos Buscando los Productos que compro el cliente: {{id}} </p>
+    
+    {% if id %}
+        <p style="color: white;"> Cliente Encontrado: {{id}}</p>
+    {% endif %}
+
+</header>
+ 
+   
+
+
+
+{% endblock EstoCambia %}

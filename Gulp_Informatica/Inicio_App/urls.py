@@ -1,3 +1,4 @@
+from django import views
 from django.urls import path
 from .views import *
 
@@ -11,4 +12,6 @@ urlpatterns = [
     path('trabajosform/', TrabajosFormulario,name="trabajosform"),
     path('ventasform/', VentasFormulario, name="ventasform"),
     path('pedidosform/', PedidosFormulario, name="pedidosform"),        
+    path('buscarcliente/', BuscarCliente, name="buscarcliente"),
+    
 ]

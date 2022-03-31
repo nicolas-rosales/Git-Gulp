@@ -76,3 +76,20 @@ def PedidosFormulario(request):
         pedidosform_form = PedidosForm()
 
         return render(request, "PedidosForm.html", {"formulario":pedidosform_form})
+    
+
+############# ------ Busqueda de Cliente ------ ###############
+
+def BuscarCliente(request):
+    data = request.GET.get('cliente', "")
+    print(data)
+    if data:
+        cliente_ = Trabajos.objects.filter(cliente__icontains = data)
+        return render(request,"BusquedaCliente.html", {"cliente":cliente_, "id":data})
+    return render(request,"BusquedaCliente.html")
+
+
+
+
+
+
